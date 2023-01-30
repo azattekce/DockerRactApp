@@ -1,0 +1,21 @@
+version: '1.0.0'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5000:3000"
+    volumes:
+      - /app/node_modlues
+      - .:/app
+  react-app_5001:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5001:3000"
+    volumes:
+      - /app/node_modlues
+      - .:/app 
+    
